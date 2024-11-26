@@ -25,13 +25,11 @@ MNIST
 
  The MNIST dataset is another particularly famous dataset as CSV file. It contains several thousands of hand-written digits (0 to 9). Each hand-written digit is contained in a 28 × 28 8-bit grayscale image. This means that each digit has 784 (282 ) pixels, and each pixel has a value that ranges from 0 (black) to 255 (white). The dataset can be downloaded from the following URL: https://raw.githubusercontent.com/dbdmg/data-science-lab/master/datasets/mnist_test.csv. Each row of the MNIST datasets represents a digit. For the sake of simplicity, this dataset contains only a small fraction (10,000 digits out of 70,000) of the real MNIST dataset, which is known as the MNIST test set. For each digit, 785 values are available.
 
-Exercises 1.
+Exercises 
 
- Iris dataset Load the Iris dataset as a list of lists (each of the 150 lists should have 5 elements). Compute and print the mean and the standard deviation for each of the 4 measurement columns (i.e. sepal length and width, petal length and width). Compute and print the mean and the standard deviation for each of the 4 measurement columns, separately for each of the three Iris species (Versicolor, Virginica and Setose). Which measurement would you consider “best”, if you were to guess the Iris species based only on those four values? 
+1. Iris dataset Load the Iris dataset as a list of lists (each of the 150 lists should have 5 elements). Compute and print the mean and the standard deviation for each of the 4 measurement columns (i.e. sepal length and width, petal length and width). Compute and print the mean and the standard deviation for each of the 4 measurement columns, separately for each of the three Iris species (Versicolor, Virginica and Setose). Which measurement would you consider “best”, if you were to guess the Iris species based only on those four values? 
 
-2. Citybik.es dataset 
-
-Load the Citybik.es dataset as a Python dictionary. Use of the json module. Count and print the number of active stations (a station is active if its extra.status field is "online"). Count and print the total number of bikes available (field free_bikes) and the number of free docks (field empty_slots) throughout all stations. Given the coordinates (latitude, longitude) of a point (e.g. 45.074512, 7.694419), identify the closest bike station to it that has available bikes. For computing the distance among two points (given their coordinates), you can use the function distance_coords() defined in the code snippet below (which is an implementation of the great-circle distance): 
+2. Load the Citybik.es dataset as a Python dictionary. Use of the json module. Count and print the number of active stations (a station is active if its extra.status field is "online"). Count and print the total number of bikes available (field free_bikes) and the number of free docks (field empty_slots) throughout all stations. Given the coordinates (latitude, longitude) of a point (e.g. 45.074512, 7.694419), identify the closest bike station to it that has available bikes. For computing the distance among two points (given their coordinates), you can use the function distance_coords() defined in the code snippet below (which is an implementation of the great-circle distance): 
 
 from math import cos, acos, sin 
 defdistance_coords(lat1, lng1, lat2, lng2):
@@ -41,9 +39,7 @@ lat1, lng1, lat2, lng2 = map(deg2rad, [ lat1, lng1, lat2, lng2 ])
  R = 6378100 # Radius of the Earth, in meters return
  R * acos(sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(lng1 - lng2)) 
 
-3. MNIST dataset 
-
-Load the MNIST dataset. Create a function that, given a position 1 ≤ k ≤ 10, 000, prints the kthdigit of the dataset (i.e. thekthrow of the csv file) as a grid of 28 × 28 characters. More specifically, you should map each range of pixel values to the following characters:
+3. Load the MNIST dataset. Create a function that, given a position 1 ≤ k ≤ 10, 000, prints the kthdigit of the dataset (i.e. thekthrow of the csv file) as a grid of 28 × 28 characters. More specifically, you should map each range of pixel values to the following characters:
  [0, 64) → " " 
 [64, 128) → "." 
 [128, 192) → "*" 
@@ -51,19 +47,16 @@ Load the MNIST dataset. Create a function that, given a position 1 ≤ k ≤ 10,
 
 Compute the Euclidean distance between each pair of the 784-dimensional vectors of the digits at the following positions: 26th, 30th, 32nd, 35th. Based on the distances computed in the previous step and knowing that the digits listed are 7, 0, 1, 1, can you assign the correct label to each of the digits ? 
 
-4. Tips dataset Read the dataset 
-
-“Tips.csv” as a dataframe “Data”. Extract the columns in the following sequence - Time, TotalBill, Tips. Plot a histogram for the variable ‘TotalBill’ to check which range has the highest frequency. Draw a bar chart for the variable “Day”. Identify the category with the maximum count. Demonstrate the data distributions using box, scatter plot, histogram, and bar chart on iris dataset. Demonstrate the correlation plot on iris dataset and perform exploratory visualization giving an overview of relationships among data with covariance analysis. 
+4. Tips dataset Read the dataset. “Tips.csv” as a dataframe “Data”. Extract the columns in the following sequence - Time, TotalBill, Tips. Plot a histogram for the variable ‘TotalBill’ to check which range has the highest frequency. Draw a bar chart for the variable “Day”. Identify the category with the maximum count. Demonstrate the data distributions using box, scatter plot, histogram, and bar chart on iris dataset. Demonstrate the correlation plot on iris dataset and perform exploratory visualization giving an overview of relationships among data with covariance analysis. 
 
 5. Split the Iris dataset into two the datasets - IrisTest_TrainData.csv, IrisTest_TestData.csv. Read them as two separate data frames named Train_Data and Test_Data respectively. 
  
 Answer the following questions: 
-• How many missing values are there in Train_Data? 
-• What is the proportion of Setosa types in the Test_Data? 
-• What is the accuracy score of the K-Nearest Neighbor model (model_1) with 2/3 neighbors using Train_Data and Test_Data? 
-• Identify the list of indices of misclassified samples from the ‘model_1’.
- • Build a logistic regression model (model_2) keeping the modelling steps constant. Find the accuracy of the model_2
-
+1. How many missing values are there in Train_Data?
+2. What is the proportion of Setosa types in the Test_Data?
+3. What is the accuracy score of the K-Nearest Neighbor model (model_1) with 2/3 neighbors using Train_Data and Test_Data?
+4. Identify the list of indices of misclassified samples from the ‘model_1’.
+5. Build a logistic regression model (model_2) keeping the modelling steps constant. Find the accuracy of the model_2
 
 1. program 1: <a href="https://github.com/DhanyaJayanA/Basic-Programming/blob/main/DS_LAB_Program1.ipynb">Code</a>
 2. program 2: <a href="https://github.com/DhanyaJayanA/Basic-Programming/blob/main/DS_Lab_Program_2.ipynb">Code</a>
